@@ -1,25 +1,47 @@
 {
-    "name": "zemax",
-    "displayName": "Zemax",
-    "description": "Zemax Text Files",
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.55.0"
-    },
-    "categories": [
-        "Programming Languages"
+  "name": "zemax",
+  "displayName": "Zemax",
+  "description": "Zemax Text Files",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.55.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "zemaxtext",
+        "aliases": [
+          "Zemax",
+          "zemaxtext"
+        ],
+        "extensions": [
+          ".zmx",
+          ".tsc",
+          ".dat",
+          ".agf",
+          ".mf",
+          ".uda",
+          ".udd",
+          ".zas",
+          ".zqe",
+          ".zex",
+          ".zes",
+          ".pob",
+          ".zmm",
+          ".tpd"
+        ],
+        "configuration": "./language-configuration.json"
+      }
     ],
-    "contributes": {
-        "languages": [{
-            "id": "zemaxtext",
-            "aliases": ["Zemax", "zemaxtext"],
-            "extensions": [".dat"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "zemaxtext",
-            "scopeName": "source.zemax",
-            "path": "./syntaxes/zemaxtext.tmLanguage.json"
-        }]
-    }
+    "grammars": [
+      {
+        "language": "zemaxtext",
+        "scopeName": "source.zemax",
+        "path": "./syntaxes/zemaxtext.tmLanguage.json"
+      }
+    ]
+  }
 }
