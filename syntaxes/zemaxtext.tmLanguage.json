@@ -3,18 +3,59 @@
   "name": "Zemax",
   "patterns": [
     {
+      "include": "#comments"
+    },
+    {
       "include": "#keywords"
+    },
+    {
+      "include": "#variables"
+    },
+    {
+      "include": "#constants"
     },
     {
       "include": "#strings"
     }
   ],
   "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.number-sign.zemaxtext",
+          "match": "\\!.*\\n"
+        },
+        {
+          "name": "comment.line.number-sign.zemaxtext",
+          "match": "^VERS|BLNK.*\\n"
+        }
+      ]
+    },
     "keywords": {
       "patterns": [
         {
           "name": "keyword.control.zemaxtext",
-          "match": "\\b(MATE|COAT|IDEAL|TABLE)\\b"
+          "match": "^(MATE|COAT|IDEAL2|IDEAL|TABLE|NM|DMFS)\\b"
+        }
+      ]
+    },
+    "variables": {
+      "patterns": [
+        {
+          "name": "variable.parameter.zemaxtext",
+          "match": "^(ANGL|WAVE|ED|CD|TD|OD|LD|IT)\\b"
+        }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "name": "constant.numeric.zemaxtext",
+          "match": "\\b-?[\\d.]+(?:E|e-?\\d+)?\\b"
+        },
+        {
+          "name": "constant.other.zemaxtext",
+          "match": "\\b[a-zA-Z][a-zA-Z0-9_-]+\\b"
         }
       ]
     },
