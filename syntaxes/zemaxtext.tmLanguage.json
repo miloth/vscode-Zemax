@@ -43,7 +43,7 @@
       "patterns": [
         {
           "name": "variable.parameter.zemaxtext",
-          "match": "^(ANGL|WAVE|ED|CD|TD|OD|LD|IT)\\b"
+          "match": "^(ED|CD|TD|OD|LD|IT)\\b"
         }
       ]
     },
