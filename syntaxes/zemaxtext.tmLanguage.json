@@ -15,6 +15,9 @@
       "include": "#constants"
     },
     {
+      "include": "#numbers"
+    },
+    {
       "include": "#strings"
     }
   ],
@@ -50,12 +53,16 @@
     "constants": {
       "patterns": [
         {
-          "name": "constant.numeric.zemaxtext",
-          "match": "\\b-?[\\d.]+(?:E|e-?\\d+)?\\b"
-        },
-        {
           "name": "constant.other.zemaxtext",
           "match": "\\b[a-zA-Z][a-zA-Z0-9_-]+\\b"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "numbers.numeric.zemaxtext",
+          "match": "\\b[0-9]*.?[0-9]*]\\b"
         }
       ]
     },
