@@ -35,7 +35,7 @@
       "patterns": [
         {
           "name": "entity.name.class.control.zemaxtext",
-          "match": "^(MATE|COAT|IDEAL2|IDEAL|TABLE|NM|DMFS)\\b"
+          "match": "^(MATE|COAT|IDEAL2|IDEAL|TABLE|NM|DMFS|ENCRYPTED)\\b"
         }
       ]
     },
